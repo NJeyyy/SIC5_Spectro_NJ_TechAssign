@@ -22,7 +22,7 @@ def RootRoute_lol():
     return pd.DataFrame.from_dict(Alldata).to_html(), 200
 @serverSET.route("/gsubmit", methods=["GET"])
 def frm_sensor():
-    tst = datetime.now(tz=pytz.timezone("Asia/Jakarta")).strftime("%d%m%Y : %H%M") //ga yakin ada bogor...
+    tst = datetime.now(tz=pytz.timezone("Asia/Jakarta")).strftime("%d%m%Y : %H%M") #ga yakin ada bogor...
     temp=forTempCalc(request.args["temperature"])
     hum=request.args["humidity"]
     Alldata["Timestamp"].append(tst)
